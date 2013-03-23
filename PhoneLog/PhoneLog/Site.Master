@@ -38,7 +38,7 @@
         <div class="content-wrapper">
             <div class="float-left">
                 <p class="site-title">
-                    <img src="http://rosedale.org/wp-content/uploads/2012/06/RDA_logo_330.png" alt="Rosedale Development Association" width=255px height=100px></a>
+                    <img src="http://rosedale.org/wp-content/uploads/2012/06/RDA_logo_330.png" alt="Rosedale Development Association"></a>
                 </p>
             </div>
             <div class="float-right">
@@ -62,8 +62,8 @@
                 <nav>
                     <ul id="menu">
                         <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About.aspx">About</a></li>
-                        <li><a runat="server" href="~/Contact.aspx">Contact</a></li>
+                        <!--<li><a runat="server" href="~/About.aspx">About</a></li>
+                        <li><a runat="server" href="~/Contact.aspx">Contact</a></li>-->
                     </ul>
                 </nav>
             </div>

@@ -13,10 +13,5 @@ namespace PhoneLog
         {
 
         }
-
-        protected void newUser_CreatedUser(object sender, EventArgs e)
-        {
-
-        }
     }
 }
