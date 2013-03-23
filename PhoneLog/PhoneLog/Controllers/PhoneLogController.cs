@@ -8,7 +8,7 @@ namespace PhoneLog.Controllers
 {
     public class PhoneLogController
     {
-        public static void storePhoneLog(string name, DateTime date, string phoneNumber, string message, int employeeId, int callTypeid, Boolean followedUp)
+        public static void storePhoneLog(string name, DateTime date, string phoneNumber, string message, Boolean followedUp)
         {
             using (var db = new PhoneLog.Models.PhoneLogContext())
             {
@@ -18,8 +18,8 @@ namespace PhoneLog.Controllers
                     CallDate = date,
                     PhoneNumber = phoneNumber,
                     Message = message,
-                    EmployeeId = employeeId,
-                    CallTypeId = callTypeid,
+                    //EmployeeId = employeeId,
+                    //CallTypeId = callTypeid,
                     FollowedUp = followedUp
                 };
                 db.PhoneLogs.Add(log);

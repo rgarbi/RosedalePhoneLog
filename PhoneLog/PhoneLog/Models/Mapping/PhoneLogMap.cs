@@ -29,10 +29,10 @@ namespace PhoneLog.Models.Mapping
             this.Property(t => t.FollowedUp).HasColumnName("FollowedUp");
 
             // Relationships
-            this.HasOptional(t => t.CallType)
+            this.HasRequired(t => t.CallType)
                 .WithMany(t => t.PhoneLogs)
                 .HasForeignKey(d => d.CallTypeId);
-            this.HasOptional(t => t.Employee)
+            this.HasRequired(t => t.Employee)
                 .WithMany(t => t.PhoneLogs)
                 .HasForeignKey(d => d.EmployeeId);
 

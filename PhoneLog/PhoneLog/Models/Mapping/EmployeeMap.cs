@@ -11,12 +11,8 @@ namespace PhoneLog.Models.Mapping
             this.HasKey(t => t.Id);
 
             // Properties
-            this.Property(t => t.Id)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-
-            this.Property(t => t.EmployeeEmail)
-                .IsFixedLength()
-                .HasMaxLength(10);
+            this.Property(t => t.EmployeeEmail);
+                
 
             // Table & Column Mappings
             this.ToTable("Employee");

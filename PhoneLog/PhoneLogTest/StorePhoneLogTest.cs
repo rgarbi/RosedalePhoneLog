@@ -24,8 +24,8 @@ namespace PhoneLogTest
                 new DateTime(),
                 "543-3333",
                 "Message",
-                1,
-                1,
+                //0,
+                //0,
                 false);
         }
     }
