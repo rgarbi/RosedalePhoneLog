@@ -5,17 +5,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
 </asp:Content>--%>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-
-
-    <asp:Table ID="Table1" runat="server">
+    <asp:Table ID="tblPhone" runat="server">
         <asp:TableHeaderRow>
             <asp:TableHeaderCell>Date</asp:TableHeaderCell>
             <asp:TableHeaderCell>Name of Caller</asp:TableHeaderCell>
             <asp:TableHeaderCell>Phone</asp:TableHeaderCell>
-            <asp:TableHeaderCell>Message</asp:TableHeaderCell>
-            <asp:TableHeaderCell>Who For</asp:TableHeaderCell>
-            <asp:TableHeaderCell>Call Type</asp:TableHeaderCell>
-            <asp:TableHeaderCell>Follow Up</asp:TableHeaderCell>
         </asp:TableHeaderRow>
         <asp:TableRow>
             <asp:TableCell>
@@ -27,22 +21,34 @@
             <asp:TableCell>
                 <asp:TextBox ID="txtPhone" runat="server"></asp:TextBox>
             </asp:TableCell>
-            <asp:TableCell>
-                <asp:TextBox ID="areaMessage" runat="server"></asp:TextBox></asp:TableCell>
-            <asp:TableCell>
-                <asp:DropDownList ID="dropId" runat="server" DataSourceID="SqlDataSource2" DataTextField="Id" DataValueField="Id">
-        </asp:DropDownList></asp:DropDownList>
-            </asp:TableCell>
-            <asp:TableCell><asp:DropDownList ID="dropType" runat="server" DataSourceID="SqlDataSource2"  DataTextField="" DataValueField="">
-        </asp:DropDownList></asp:TableCell>
-            <asp:TableCell><input id="Radio1" type="radio" /></asp:TableCell>
         </asp:TableRow>
-
-
-
-
+        <asp:TableRow>
+            <asp:TableCell>Message</asp:TableCell>
+            <asp:TableCell>Who For</asp:TableCell>
+            <asp:TableCell>Call Type</asp:TableCell>
+        </asp:TableRow>
+        <asp:TableRow>
+            <asp:TableCell>
+                <asp:TextBox ID="areaMessage" runat="server"></asp:TextBox>
+            </asp:TableCell>
+            <asp:TableCell>
+                <asp:DropDownList ID="dropId" runat="server" DataSourceID="" DataTextField="Id" DataValueField="Id">
+                </asp:DropDownList>
+            </asp:TableCell>
+            <asp:TableCell>
+                <asp:DropDownList ID="dropType" runat="server" DataSourceID="SqlDataSource2" DataTextField="" DataValueField="">
+                </asp:DropDownList>
+            </asp:TableCell>
+        </asp:TableRow>
+        <asp:TableRow>
+            <asp:TableCell>Follow Up</asp:TableCell>
+        </asp:TableRow>
+        <asp:TableRow>
+            <asp:TableCell>
+                <input id="Radio1" type="radio" name="update" value="Yes"/>
+                <input id="Radio2" type="radio" name="update" value="No"/>
+            </asp:TableCell>
+        </asp:TableRow>
     </asp:Table>
-
-    <input  id="phoneSubmit" type="button" value="     Submit     " />
-
+    <input id="phoneSubmit" type="button" value="     Submit     " />
 </asp:Content>
