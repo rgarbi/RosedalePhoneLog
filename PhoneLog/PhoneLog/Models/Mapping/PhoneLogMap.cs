@@ -11,9 +11,6 @@ namespace PhoneLog.Models.Mapping
             this.HasKey(t => t.Id);
 
             // Properties
-            this.Property(t => t.Id)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-
             this.Property(t => t.PhoneNumber)
                 .HasMaxLength(50);
 
@@ -24,18 +21,9 @@ namespace PhoneLog.Models.Mapping
             this.Property(t => t.CallDate).HasColumnName("CallDate");
             this.Property(t => t.PhoneNumber).HasColumnName("PhoneNumber");
             this.Property(t => t.Message).HasColumnName("Message");
-            this.Property(t => t.EmployeeId).HasColumnName("EmployeeId");
-            this.Property(t => t.CallTypeId).HasColumnName("CallTypeId");
             this.Property(t => t.FollowedUp).HasColumnName("FollowedUp");
-
-            // Relationships
-            this.HasRequired(t => t.CallType)
-                .WithMany(t => t.PhoneLogs)
-                .HasForeignKey(d => d.CallTypeId);
-            this.HasRequired(t => t.Employee)
-                .WithMany(t => t.PhoneLogs)
-                .HasForeignKey(d => d.EmployeeId);
-
+            this.Property(t => t.EmployeeEmail).HasColumnName("EmployeeEmail");
+            this.Property(t => t.CallType).HasColumnName("CallType");
         }
     }
 }

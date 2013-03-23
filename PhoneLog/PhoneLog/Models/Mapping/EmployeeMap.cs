@@ -11,9 +11,6 @@ namespace PhoneLog.Models.Mapping
             this.HasKey(t => t.Id);
 
             // Properties
-            this.Property(t => t.EmployeeEmail);
-                
-
             // Table & Column Mappings
             this.ToTable("Employee");
             this.Property(t => t.Id).HasColumnName("Id");

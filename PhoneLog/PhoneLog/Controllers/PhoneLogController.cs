@@ -8,7 +8,7 @@ namespace PhoneLog.Controllers
 {
     public class PhoneLogController
     {
-        public static void storePhoneLog(string name, DateTime date, string phoneNumber, string message, Boolean followedUp)
+        public static void storePhoneLog(string name, DateTime date, string phoneNumber, string message, string employeeEmail, string callType,  Boolean followedUp)
         {
             using (var db = new PhoneLog.Models.PhoneLogContext())
             {
@@ -18,8 +18,8 @@ namespace PhoneLog.Controllers
                     CallDate = date,
                     PhoneNumber = phoneNumber,
                     Message = message,
-                    //EmployeeId = employeeId,
-                    //CallTypeId = callTypeid,
+                    EmployeeEmail = employeeEmail,
+                    CallType = callType,
                     FollowedUp = followedUp
                 };
                 db.PhoneLogs.Add(log);
@@ -46,8 +46,8 @@ namespace PhoneLog.Controllers
                         CallerName = item.CallerName,
                         CallDate = item.CallDate,
                         PhoneNumber = item.PhoneNumber,
-                        EmployeeId = item.EmployeeId,
-                        CallTypeId = item.CallTypeId,
+                        EmployeeEmail = item.EmployeeEmail,
+                        CallType = item.CallType,
                         FollowedUp = item.FollowedUp,
                         Message = item.Message
                     });
@@ -56,6 +56,18 @@ namespace PhoneLog.Controllers
 
             return allLogs;
         }
+
+        public static void deletePhoneLog(int id)
+        {
+            using (var db = new PhoneLog.Models.PhoneLogContext())
+            {
+                var log = db.PhoneLogs.Where(item => item.Id == id).Single();
+                db.PhoneLogs.Remove(log);
+                db.SaveChanges();
+            }
+        }
+
+
 
     }
 }

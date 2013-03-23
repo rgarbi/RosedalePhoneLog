@@ -1,18 +1,37 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PhoneLog.Controllers;
+using PhoneLog.Models;
+using System.Collections.Generic;
 
 namespace PhoneLogTest
 {
     [TestClass]
     public class StorePhoneLogTest
     {
-        string name = "";
-        string message = "";
-        DateTime date = new DateTime();
-        string phoneNum = "";
-        int callTypeId;
-        int emplId;
+
+        [TestCleanup]
+        public void cleanUpAllData()
+        {
+            List<Employee> allEmployees = EmployeeController.getAllEmployees();
+            List<CallType> allCalls = CallTypeController.getAllCallTypes();
+            List<PhoneLog.Models.PhoneLog> allPhoneLog = PhoneLogController.getAllPhoneLogs();
+
+            foreach (Employee emp in allEmployees)
+            {
+                EmployeeController.deleteEmployee(emp.Id);
+            }
+
+            foreach (CallType call in allCalls)
+            {
+                CallTypeController.deleteCallType(call.Id);
+            }
+
+            foreach (PhoneLog.Models.PhoneLog phoneLog in allPhoneLog)
+            {
+                PhoneLogController.deletePhoneLog(phoneLog.Id);
+            }
+        }
 
         [TestMethod]
         public void storeLog()
@@ -21,7 +40,7 @@ namespace PhoneLogTest
 
             PhoneLogController.storePhoneLog(
                 "Test",
-                new DateTime(),
+                System.DateTime.Now,
                 "543-3333",
                 "Message",
                 //0,
