@@ -4,7 +4,7 @@
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %></title>
     <asp:PlaceHolder runat="server">     
           <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>  
@@ -38,7 +38,7 @@
         <div class="content-wrapper">
             <div class="float-left">
                 <p class="site-title">
-                    <a runat="server" href="~/">your logo here</a>
+                    <img src="http://rosedale.org/wp-content/uploads/2012/06/RDA_logo_330.png" alt="Rosedale Development Association" width=255px height=100px></a>
                 </p>
             </div>
             <div class="float-right">
@@ -46,7 +46,7 @@
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul>
-                                <li><a id="registerLink" runat="server" href="~/Account/Register.aspx">Register</a></li>
+                               <!-- <li><a id="registerLink" runat="server" href="~/Account/Register.aspx">Register</a></li>-->
                                 <li><a id="loginLink" runat="server" href="~/Account/Login.aspx">Log in</a></li>
                             </ul>
                         </AnonymousTemplate>
@@ -78,7 +78,7 @@
     <footer>
         <div class="content-wrapper">
             <div class="float-left">
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>&copy; <%: DateTime.Now.Year %>Rosedale Development Association • 1403 Southwest Blvd. Kansas City, KS 66103 • (913) 677-5097</p>
             </div>
         </div>
     </footer>

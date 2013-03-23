@@ -1,11 +1,18 @@
 ﻿html {
-    background-color: #e2e2e2;
+    background-color: #f1f1f1;
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #fff;
+    background: #DCE0C2; /* old browsers */
+        background: -moz-linear-gradient(top, #DCE0C2 0%, #ffffff 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#DCE0C2), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #DCE0C2 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #DCE0C2 0%,#ffffff 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #DCE0C2 0%,#ffffff 100%); /* IE10+ */
+        background: linear-gradient(top, #DCE0C2 0%,#ffffff 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#DCE0C2', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
     border-top: solid 10px #000;
     color: #333;
     font-size: .85em;
@@ -37,7 +44,7 @@ nav, section {
 }
 
 mark {
-    background-color: #a6dbed;
+    background-color: #E6E9D3;
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -98,19 +105,21 @@ h5, h6 {
 }
 
 #body {
-    background-color: #efeeef;
+    background-color: #E6E9D3;
     clear: both;
     padding-bottom: 35px;
 }
 
     .main-content {
-        background: url("../Images/accent.png") no-repeat;
+        /**background: url("../Images/accent.png") no-repeat;**/
+        background-color: #c7d1d6;
         padding-left: 10px;
         padding-top: 30px;
     }
 
     .featured + .main-content {
-        background: url("../Images/heroAccent.png") no-repeat;
+        /**background: url("../Images/heroAccent.png") no-repeat;**/
+        background-color: #c7d1d6;
     }
 
 header .content-wrapper {
