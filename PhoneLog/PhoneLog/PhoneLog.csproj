@@ -262,6 +262,7 @@
     <Compile Include="App_Code\models\PhoneLogContext.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Controllers\CallTypeController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\PhoneLogController.cs" />
     <Compile Include="About.aspx.cs">
