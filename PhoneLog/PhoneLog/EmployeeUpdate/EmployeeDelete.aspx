@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EmployeeDelete.aspx.cs" Inherits="PhoneLog.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="Site.Master" AutoEventWireup="true" CodeBehind="EmployeeDelete.aspx.cs" Inherits="PhoneLog.WebForm1" %>
 <asp:Content ID="Userupdate" ContentPlaceHolderID="HeadContent" runat="server"></asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
