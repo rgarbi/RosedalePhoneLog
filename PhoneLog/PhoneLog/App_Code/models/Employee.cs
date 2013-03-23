@@ -9,6 +9,8 @@ namespace PhoneLog.App_Code.models
     {
         public int EpmployeeId { get; set; }
         public string EmployeeName { get; set; }
-        private string _email;
+        public string Email { get; set; }
+
+        public virtual List<Employee> Employees { get; set; }
     }
 }

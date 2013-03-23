@@ -6,14 +6,24 @@ using System.Web;
 /// <summary>
 /// Summary description for PhoneLog
 /// </summary>
-public class PhoneLog
+
+namespace PhoneLog.App_Code.models
 {
-    private string _callerName;
-    private DateTime _callDate;
-    private string _phoneNumber;
-    private string _message;
-    private string _messageTarget;
-    private string _targetEmail;
-    private string _callType;
-    private Boolean _followedUp;
+    public class PhoneLog
+    {
+        public int PhoneLogId { get; set; }
+        public string CallerName { get; set; }
+        public DateTime CallDate { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Message { get; set; }
+        public string MessageTarget { get; set; }
+        public string TargetEmail { get; set; }
+        public string CallType { get; set; }
+        public Boolean FollowedUp { get; set; }
+
+        public int CallTypeId { get; set; }
+        public int EmployeeId { get; set; }
+
+        public virtual List<PhoneLog> PhoneLogs { get; set; }
+    }
 }
