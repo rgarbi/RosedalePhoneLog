@@ -48,6 +48,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
@@ -213,6 +214,7 @@
     <Content Include="Images\orderedList7.png" />
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
+    <Content Include="Maintenace.aspx" />
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\RosedaleHost.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
@@ -255,6 +257,7 @@
     <Compile Include="App_Code\models\EmployeeMdl.cs" />
     <Compile Include="App_Code\models\CallTypeMdl.cs" />
     <Compile Include="App_Code\models\PhoneLogContext.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\PhoneLogController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
@@ -318,6 +321,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="App_Code\models\PhoneLogMdl.cs" />
+    <Compile Include="Maintenace.aspx.cs">
+      <DependentUpon>Maintenace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenace.aspx.designer.cs">
+      <DependentUpon>Maintenace.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Models\Application.cs" />
     <Compile Include="Models\CallType.cs" />
     <Compile Include="Models\Employee.cs" />
