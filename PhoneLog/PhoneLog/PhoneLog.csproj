@@ -219,6 +219,7 @@
     <Content Include="packages.config" />
     <Content Include="phoneLog.aspx" />
     <Content Include="typeUpdate.aspx" />
+    <Content Include="Report.aspx" />
     <None Include="Properties\PublishProfiles\RosedaleHost.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
@@ -374,6 +375,13 @@
     </Compile>
     <Compile Include="typeUpdate.aspx.designer.cs">
       <DependentUpon>typeUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
