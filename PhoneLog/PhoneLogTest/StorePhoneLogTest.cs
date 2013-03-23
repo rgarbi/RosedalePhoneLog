@@ -43,8 +43,8 @@ namespace PhoneLogTest
                 System.DateTime.Now,
                 "543-3333",
                 "Message",
-                //0,
-                //0,
+                "me",
+                "me@me.me",
                 false);
         }
     }
