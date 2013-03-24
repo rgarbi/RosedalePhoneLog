@@ -32,7 +32,41 @@ namespace PhoneLog
 
         protected void phoneSubmit_Click(object sender, EventArgs e)
         {
+            //Validation
+            
 
+            PhoneLogController.storePhoneLog(
+                txtName.Text,
+                DateTime.Parse(txtDate.Text),
+                txtPhone.Text,
+                txtMessage.Text,
+                employeeId.SelectedValue,
+                callType.SelectedValue,
+                chkFollowUp.Checked);
+        }
+
+        protected Boolean saveValidation()
+        {
+            bool valid = true;
+
+            //Is the date a date.
+            try
+            {
+                DateTime.Parse(txtDate.Text);
+            }
+            catch (Exception ex)
+            {
+                Trace.Write(ex.Message);
+                valid = false;
+            }
+            
+            //Must have entered Name, CallType, EmployeeEmail, Date
+            if(txtName.Text.Equals(String.Empty))
+            {
+                valid = false;
+            }
+
+            return valid;
         }
     }
 }
