@@ -47,6 +47,38 @@ namespace PhoneLogTest
                 "me@me.me",
                 false);
         }
+
+
+        [TestMethod]
+        public void getLogsDateRange()
+        {
+            System.DateTime start = new System.DateTime();
+            System.DateTime end = new System.DateTime();
+            int numLogs = 100;
+
+            end.AddDays(100.00);
+            
+            System.DateTime middle = new System.DateTime();
+            middle.AddDays(50.00);
+
+            for (int i = 0; i < numLogs; ++i)
+            {
+                PhoneLogController.storePhoneLog(
+                "Test",
+                middle,
+                "543-3333",
+                "Message",
+                "me",
+                "me@me.me",
+                false);
+            }
+
+
+            List<PhoneLog.Models.PhoneLog> allLogs = PhoneLogController.getAllPhoneLogsInRange(start, end);
+
+            Assert.AreEqual(numLogs, allLogs.Count);
+
+        }
     }
 }
     

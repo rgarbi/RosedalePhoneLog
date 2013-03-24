@@ -67,6 +67,37 @@ namespace PhoneLog.Controllers
             }
         }
 
+        public static List<PhoneLog.Models.PhoneLog> getAllPhoneLogsInRange(DateTime start, DateTime end)
+        {
+            List<PhoneLog.Models.PhoneLog> allLogs = new List<Models.PhoneLog>();
+
+            using (var db = new PhoneLog.Models.PhoneLogContext())
+            {
+                var query = from l in db.PhoneLogs
+                            where (l.CallDate.Value.CompareTo(start) >= 0) && (l.CallDate.Value.CompareTo(end) < 0)
+                            orderby l.CallDate
+                            select l;
+
+                Console.WriteLine("All logs in the database:");
+                foreach (var item in query)
+                {
+                    allLogs.Add(new Models.PhoneLog
+                    {
+                        Id = item.Id,
+                        CallerName = item.CallerName,
+                        CallDate = item.CallDate,
+                        PhoneNumber = item.PhoneNumber,
+                        EmployeeEmail = item.EmployeeEmail,
+                        CallType = item.CallType,
+                        FollowedUp = item.FollowedUp,
+                        Message = item.Message
+                    });
+                }
+            }
+
+            return allLogs;
+        }
+
 
 
     }
