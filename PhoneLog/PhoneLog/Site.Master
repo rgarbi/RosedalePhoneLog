@@ -61,9 +61,9 @@
                 </section>
                 <nav>
                     <ul id="menu">
-                        <li><a runat="server" href="Default.aspx">Home</a></li>
-                        <li><a runat="server" href="~/R.aspx">About</a></li>
-                        <li><a runat="server" href="~/Contact.aspx">Contact</a></li>
+                        <li><a runat="server" href="Default.aspx">Phone Log</a></li>
+                        <li><a runat="server" href="~/Report.aspx">Create a Report</a></li>
+                        <li><a runat="server" href="~/employeeUpdate.aspx">Employee Update</a></li>
                     </ul>
                 </nav>
             </div>
