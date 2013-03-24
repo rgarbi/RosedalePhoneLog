@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="phoneLog.aspx.cs" Inherits="PhoneLog.phoneLog" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ResultsPage.aspx.cs" Inherits="PhoneLog.phoneLog" %>
 
 <%--<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
@@ -13,7 +13,7 @@
         </asp:TableHeaderRow>
         <asp:TableRow>
             <asp:TableCell>
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <% response.Write(date)%>
             </asp:TableCell>
             <asp:TableCell>
                 <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
@@ -32,11 +32,11 @@
                 <asp:TextBox ID="areaMessage" runat="server"></asp:TextBox>
             </asp:TableCell>
             <asp:TableCell>
-                <asp:DropDownList ID="employeeId" runat="server">
+                <asp:DropDownList ID="dropId" runat="server" DataSourceID="" DataTextField="Id" DataValueField="Id">
                 </asp:DropDownList>
             </asp:TableCell>
             <asp:TableCell>
-                <asp:DropDownList ID="callType" runat="server">
+                <asp:DropDownList ID="dropType" runat="server" DataSourceID="SqlDataSource2" DataTextField="" DataValueField="">
                 </asp:DropDownList>
             </asp:TableCell>
         </asp:TableRow>
