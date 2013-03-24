@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PhoneLog {
+namespace PhoneLog.Account {
     
     
     public partial class SiteMaster {
