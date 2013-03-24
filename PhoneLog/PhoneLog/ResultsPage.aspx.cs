@@ -11,7 +11,13 @@ namespace PhoneLog
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            foreach(string key in this.Page.Request.Params.AllKeys)
+            {
+                Label lblKey = new Label();
+                lblKey.Text = "Key: " + key + " | Value: " + this.Page.Request.Params.GetValues(key);
 
+                this.confirmPanel.Controls.Add(lblKey);
+            }
         }
     }
 }

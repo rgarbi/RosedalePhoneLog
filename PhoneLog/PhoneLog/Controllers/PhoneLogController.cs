@@ -8,8 +8,9 @@ namespace PhoneLog.Controllers
 {
     public class PhoneLogController
     {
-        public static void storePhoneLog(string name, DateTime date, string phoneNumber, string message, string employeeEmail, string callType,  Boolean followedUp)
+        public static int storePhoneLog(string name, DateTime date, string phoneNumber, string message, string employeeEmail, string callType,  Boolean followedUp)
         {
+            
             using (var db = new PhoneLog.Models.PhoneLogContext())
             {
                 
@@ -25,6 +26,15 @@ namespace PhoneLog.Controllers
                 db.PhoneLogs.Add(log);
                 db.SaveChanges();
 
+                var savedLog = db.PhoneLogs.Where(item => 
+                    item.CallerName == name && 
+                    item.CallDate == date && 
+                    item.PhoneNumber == phoneNumber &&
+                    item.Message == message &&
+                    item.CallType == callType &&
+                    item.FollowedUp == followedUp).Single();
+
+                return savedLog.Id;
             }
         }
 

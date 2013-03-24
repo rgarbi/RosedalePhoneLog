@@ -47,7 +47,7 @@ namespace PhoneLog
 
             if (saveValidation())
             {
-                PhoneLogController.storePhoneLog(
+               int id = PhoneLogController.storePhoneLog(
                     txtName.Text,
                     DateTime.Parse(txtDate.Text),
                     txtPhone.Text,
@@ -57,7 +57,10 @@ namespace PhoneLog
                     chkFollowUp.Checked);
 
                 clearAll();
+                Response.Redirect("~/ResultsPage.aspx?PhoneLogId="+id, true);
             }
+
+           
         }
 
         protected Boolean saveValidation()
