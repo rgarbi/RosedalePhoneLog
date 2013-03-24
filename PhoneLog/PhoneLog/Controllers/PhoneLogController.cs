@@ -34,6 +34,7 @@ namespace PhoneLog.Controllers
                     item.CallType == callType &&
                     item.FollowedUp == followedUp).Single();
 
+                EmailController.sendAnEmail(savedLog);
                 return savedLog.Id;
             }
         }

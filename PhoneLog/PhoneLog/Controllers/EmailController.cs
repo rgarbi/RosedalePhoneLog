@@ -24,7 +24,7 @@ namespace PhoneLog.Controllers
                 EnableSsl = true,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
                 UseDefaultCredentials = false,
-                Credentials = new NetworkCredential(fromAddress.Address, fromPassword, "rosedale.org")
+                Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
             };
             using (var message = new MailMessage(fromAddress, toAddress)
             {

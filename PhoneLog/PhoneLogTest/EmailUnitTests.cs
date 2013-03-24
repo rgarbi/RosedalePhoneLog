@@ -8,6 +8,7 @@ namespace PhoneLogTest
     public class EmailUnitTests
     {
         [TestMethod]
+        [Ignore]
         public void sendMail()
         {
             PhoneLog.Models.PhoneLog phoneLog = new PhoneLog.Models.PhoneLog();
@@ -15,7 +16,7 @@ namespace PhoneLogTest
             phoneLog.CallDate = System.DateTime.Now;
             phoneLog.PhoneNumber = "543-3333";
             phoneLog.Message = "Message";
-            phoneLog.EmployeeEmail = "richard.garbi@gmail.com";
+            phoneLog.EmployeeEmail = "";
 
 
             EmailController.sendAnEmail(phoneLog);
