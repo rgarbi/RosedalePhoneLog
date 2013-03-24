@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace PhoneLog
 {
-    public partial class phoneLog : System.Web.UI.Page
+    public partial class ResultsPage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

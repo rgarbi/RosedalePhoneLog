@@ -10,7 +10,7 @@
 namespace PhoneLog {
     
     
-    public partial class phoneLog {
+    public partial class ResultsPage {
         
         /// <summary>
         /// tblPhone control.
