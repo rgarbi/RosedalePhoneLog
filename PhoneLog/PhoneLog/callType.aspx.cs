@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace PhoneLog
 {
-    public partial class WebForm2 : System.Web.UI.Page
+    public partial class CallType : System.Web.UI.Page
     {
 
         protected override void OnInit(EventArgs e)
@@ -53,7 +53,7 @@ namespace PhoneLog
 
 
 
-        public static List<CallType> allCallTypes;
+        public static List<Models.CallType> allCallTypes;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -99,7 +99,7 @@ namespace PhoneLog
                 this.tblAllCalls.Visible = true;
                 TableRowCollection rows = this.tblAllCalls.Rows;
 
-                foreach (CallType call in allCallTypes)
+                foreach (Models.CallType call in allCallTypes)
                 {
                     TableRow row = new TableRow();
                     TableCell cell = new TableCell();

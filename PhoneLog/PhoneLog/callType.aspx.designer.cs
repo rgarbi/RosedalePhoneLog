@@ -10,7 +10,7 @@
 namespace PhoneLog {
     
     
-    public partial class WebForm2 {
+    public partial class CallType {
         
         /// <summary>
         /// tokenField control.

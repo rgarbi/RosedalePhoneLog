@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhoneLog.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,13 +12,60 @@ namespace PhoneLog
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            foreach(string key in this.Page.Request.Params.AllKeys)
-            {
-                Label lblKey = new Label();
-                lblKey.Text = "Key: " + key + " | Value: " + this.Page.Request.Params.GetValues(key);
+            string phoneLogId = HttpUtility.ParseQueryString(Request.Url.Query).Get("PhoneLogId");
+            
+            Models.PhoneLog log = PhoneLogController.getPhoneLogById(int.Parse(phoneLogId));
 
-                this.confirmPanel.Controls.Add(lblKey);
-            }
+            TableRow row = new TableRow();
+            TableCell cellTxt = new TableCell();
+            TableCell cellValue = new TableCell();
+
+            cellTxt.Text = "Name:";
+            cellValue.Text = log.CallerName;
+            row.Cells.Add(cellTxt);
+            row.Cells.Add(cellValue);
+            this.confirmTable.Rows.Add(row);
+
+            row = new TableRow();
+            cellTxt = new TableCell();
+            cellValue = new TableCell();
+
+            cellTxt.Text = "Call Date:";
+            cellValue.Text = log.CallDate.ToString();
+            row.Cells.Add(cellTxt);
+            row.Cells.Add(cellValue);
+            this.confirmTable.Rows.Add(row);
+
+            row = new TableRow();
+            cellTxt = new TableCell();
+            cellValue = new TableCell();
+
+            cellTxt.Text = "Phone Number:";
+            cellValue.Text = log.PhoneNumber;
+            row.Cells.Add(cellTxt);
+            row.Cells.Add(cellValue);
+            this.confirmTable.Rows.Add(row);
+
+            row = new TableRow();
+            cellTxt = new TableCell();
+            cellValue = new TableCell();
+
+            cellTxt.Text = "Call Type:";
+            cellValue.Text = log.CallType;
+            row.Cells.Add(cellTxt);
+            row.Cells.Add(cellValue);
+            this.confirmTable.Rows.Add(row);
+
+            row = new TableRow();
+            cellTxt = new TableCell();
+            cellValue = new TableCell();
+
+            cellTxt.Text = "Message:";
+            cellValue.Text = log.Message;
+            row.Cells.Add(cellTxt);
+            row.Cells.Add(cellValue);
+            this.confirmTable.Rows.Add(row);
+
         }
     }
 }

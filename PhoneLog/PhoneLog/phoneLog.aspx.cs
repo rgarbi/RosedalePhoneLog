@@ -18,7 +18,7 @@ namespace PhoneLog
             //Load the Call Types and the Employee Email addresses
             this.callType.Items.Clear();
             this.callType.Items.Add(new ListItem(String.Empty, String.Empty));
-            foreach (CallType call in CallTypeController.getAllCallTypes())
+            foreach (Models.CallType call in CallTypeController.getAllCallTypes())
             {
                 this.callType.Items.Add(new ListItem(call.CallType1, call.CallType1));
             }

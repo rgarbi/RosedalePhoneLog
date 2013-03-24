@@ -109,6 +109,26 @@ namespace PhoneLog.Controllers
         }
 
 
+        public static Models.PhoneLog getPhoneLogById(int id)
+        {
+            using (var db = new PhoneLog.Models.PhoneLogContext())
+            {
+                var log = db.PhoneLogs.Where(item => item.Id == id).Single();
+                return new Models.PhoneLog
+                {
+                    Id = log.Id,
+                    CallDate = log.CallDate,
+                    EmployeeEmail = log.EmployeeEmail,
+                    CallerName = log.CallerName,
+                    CallType = log.CallType,
+                    FollowedUp = log.FollowedUp,
+                    Message = log.Message,
+                    PhoneNumber = log.PhoneNumber
+                };
+            }
+        }
+
+
 
     }
 }
