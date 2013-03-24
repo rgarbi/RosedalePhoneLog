@@ -218,7 +218,7 @@
     <Content Include="Images\orderedList9.png" />
     <Content Include="Images\RDA_logo_330.png" />
     <Content Include="packages.config" />
-    <Content Include="phoneLog.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="callType.aspx" />
     <Content Include="Report.aspx" />
     <None Include="Properties\PublishProfiles\RosedaleHost.pubxml" />
@@ -355,12 +355,12 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UsersOpenAuthAccount.cs" />
     <Compile Include="Models\UsersOpenAuthData.cs" />
-    <Compile Include="phoneLog.aspx.cs">
-      <DependentUpon>phoneLog.aspx</DependentUpon>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="phoneLog.aspx.designer.cs">
-      <DependentUpon>phoneLog.aspx</DependentUpon>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
