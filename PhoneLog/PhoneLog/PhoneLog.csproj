@@ -194,6 +194,8 @@
     <Content Include="Default.aspx" />
     <Content Include="callType.aspx" />
     <Content Include="Report.aspx" />
+    <Content Include="Account\Master.Master" />
+    <None Include="EmployeeUpdate\Master.Master" />
     <None Include="Properties\PublishProfiles\RosedaleHost.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
@@ -231,6 +233,13 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account\Master.Master.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Master.Master.designer.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+    </Compile>
     <Compile Include="App_Code\models\EmployeeMdl.cs" />
     <Compile Include="App_Code\models\CallTypeMdl.cs" />
     <Compile Include="App_Code\models\PhoneLogContext.cs" />
@@ -281,6 +290,13 @@
     </Compile>
     <Compile Include="employeeUpdate.aspx.designer.cs">
       <DependentUpon>employeeUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeUpdate\Site.Master.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeUpdate\Site.Master.designer.cs">
+      <DependentUpon>Master.Master</DependentUpon>
     </Compile>
     <Compile Include="ResultsPage.aspx.cs">
       <DependentUpon>ResultsPage.aspx</DependentUpon>
