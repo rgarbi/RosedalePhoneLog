@@ -25,6 +25,13 @@ namespace PhoneLog
                 this.employeeId.Items.Add(new ListItem(empl.EmployeeName, empl.EmployeeEmail));
             }
 
+            //Default Date
+            this.txtDate.Text = DateTime.Now.Date.ToShortDateString();
+
+        }
+
+        protected void phoneSubmit_Click(object sender, EventArgs e)
+        {
 
         }
     }

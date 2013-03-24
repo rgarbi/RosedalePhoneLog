@@ -22,13 +22,13 @@ namespace PhoneLog {
         protected global::System.Web.UI.WebControls.Table tblPhone;
         
         /// <summary>
-        /// TextBox1 control.
+        /// txtDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtDate;
         
         /// <summary>
         /// txtName control.
@@ -74,5 +74,23 @@ namespace PhoneLog {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList callType;
+        
+        /// <summary>
+        /// chkFollowUp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkFollowUp;
+        
+        /// <summary>
+        /// phoneSubmit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button phoneSubmit;
     }
 }
