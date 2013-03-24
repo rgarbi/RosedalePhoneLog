@@ -58,21 +58,21 @@ namespace PhoneLog {
         protected global::System.Web.UI.WebControls.TextBox areaMessage;
         
         /// <summary>
-        /// dropId control.
+        /// employeeId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dropId;
+        protected global::System.Web.UI.WebControls.DropDownList employeeId;
         
         /// <summary>
-        /// dropType control.
+        /// callType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dropType;
+        protected global::System.Web.UI.WebControls.DropDownList callType;
     }
 }

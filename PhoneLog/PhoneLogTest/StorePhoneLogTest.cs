@@ -52,14 +52,14 @@ namespace PhoneLogTest
         [TestMethod]
         public void getLogsDateRange()
         {
-            System.DateTime start = new System.DateTime();
-            System.DateTime end = new System.DateTime();
+            System.DateTime start = DateTime.Now;
+            System.DateTime end = DateTime.Now;
             int numLogs = 100;
 
-            end.AddDays(100.00);
-            
-            System.DateTime middle = new System.DateTime();
-            middle.AddDays(50.00);
+            end = end.AddDays(100.00);
+
+            System.DateTime middle = DateTime.Now;
+            middle = middle.AddDays(50.00);
 
             for (int i = 0; i < numLogs; ++i)
             {

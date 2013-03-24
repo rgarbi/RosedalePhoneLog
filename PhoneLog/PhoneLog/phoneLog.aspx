@@ -32,11 +32,11 @@
                 <asp:TextBox ID="areaMessage" runat="server"></asp:TextBox>
             </asp:TableCell>
             <asp:TableCell>
-                <asp:DropDownList ID="dropId" runat="server" DataSourceID="" DataTextField="Id" DataValueField="Id">
+                <asp:DropDownList ID="employeeId" runat="server">
                 </asp:DropDownList>
             </asp:TableCell>
             <asp:TableCell>
-                <asp:DropDownList ID="dropType" runat="server" DataSourceID="SqlDataSource2" DataTextField="" DataValueField="">
+                <asp:DropDownList ID="callType" runat="server">
                 </asp:DropDownList>
             </asp:TableCell>
         </asp:TableRow>
