@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneLog", "PhoneLog\PhoneL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneLogTest", "PhoneLogTest\PhoneLogTest.csproj", "{E54FE51C-1F34-434A-BA65-4A838E50D19F}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "PhoneLogDB", "PhoneLogDB\PhoneLogDB.sqlproj", "{1320B118-F7DE-406A-B31E-33F4BA41B21F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,12 @@ Global
 		{E54FE51C-1F34-434A-BA65-4A838E50D19F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E54FE51C-1F34-434A-BA65-4A838E50D19F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E54FE51C-1F34-434A-BA65-4A838E50D19F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1320B118-F7DE-406A-B31E-33F4BA41B21F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1320B118-F7DE-406A-B31E-33F4BA41B21F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1320B118-F7DE-406A-B31E-33F4BA41B21F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1320B118-F7DE-406A-B31E-33F4BA41B21F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1320B118-F7DE-406A-B31E-33F4BA41B21F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1320B118-F7DE-406A-B31E-33F4BA41B21F}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

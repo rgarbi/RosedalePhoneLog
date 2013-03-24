@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseName>SQL2008R2_917023_phonelog</TargetDatabaseName>
+    <DeployScriptFileName>PhoneLogDB.sql</DeployScriptFileName>
+    <TargetConnectionString>Data Source=sql2k805.discountasp.net;Persist Security Info=True;User ID=SQL2008R2_917023_phonelog_user;Pooling=False</TargetConnectionString>
+    <ProfileVersionNumber>1</ProfileVersionNumber>
+  </PropertyGroup>
+</Project>

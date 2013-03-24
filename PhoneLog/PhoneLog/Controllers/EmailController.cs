@@ -11,20 +11,20 @@ namespace PhoneLog.Controllers
     {
         public static void sendAnEmail(Models.PhoneLog phoneLog)
         {
-            var fromAddress = new MailAddress("PhoneMessage@rosedale.com", "Phone Message");
+            var fromAddress = new MailAddress("phonemessage@rosedale.org", "Phone Message");
             var toAddress = new MailAddress(phoneLog.EmployeeEmail, "To Name");
             const string fromPassword = "fromPassword";
-            const string subject = "Subject";
-            const string body = "Body";
+            string subject = "Phone Message from: " + phoneLog.CallerName;
+            string body = "Body";
 
             var smtp = new SmtpClient
             {
                 Host = "smtp.rosedale.org",
                 Port = 587,
-                EnableSsl = true,
+                EnableSsl = false,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
-                UseDefaultCredentials = false,
-                Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+                UseDefaultCredentials = true,
+                //Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
             };
             using (var message = new MailMessage(fromAddress, toAddress)
             {
