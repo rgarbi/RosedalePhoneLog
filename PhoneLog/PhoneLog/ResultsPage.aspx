@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ResultsPage.aspx.cs" Inherits="PhoneLog.phoneLog" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ResultsPage.aspx.cs" Inherits="PhoneLog.ResultsPage" %>
 
 <%--<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
@@ -13,7 +13,7 @@
         </asp:TableHeaderRow>
         <asp:TableRow>
             <asp:TableCell>
-                <% response.Write(date)%>
+                <%-- response.Write(date);--%>
             </asp:TableCell>
             <asp:TableCell>
                 <asp:TextBox ID="txtName" runat="server"></asp:TextBox>

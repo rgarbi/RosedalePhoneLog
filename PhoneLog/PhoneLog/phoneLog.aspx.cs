@@ -15,11 +15,14 @@ namespace PhoneLog
         {
             //Load the Call Types and the Employee Email addresses
             this.callType.Items.Clear();
+            this.callType.Items.Add(new ListItem(String.Empty, String.Empty));
             foreach(CallType call in CallTypeController.getAllCallTypes())
             {
-                this.callType.Items.Add(call.CallType1);
+                this.callType.Items.Add(new ListItem(call.CallType1, call.CallType1));
             }
+
             this.employeeId.Items.Clear();
+            this.employeeId.Items.Add(new ListItem(String.Empty, String.Empty));
             foreach (Employee empl in EmployeeController.getAllEmployees())
             {
                 this.employeeId.Items.Add(new ListItem(empl.EmployeeName, empl.EmployeeEmail));
@@ -33,16 +36,20 @@ namespace PhoneLog
         protected void phoneSubmit_Click(object sender, EventArgs e)
         {
             //Validation
-            
+            clearErrorMessages();
+            if (saveValidation())
+            {
+                PhoneLogController.storePhoneLog(
+                    txtName.Text,
+                    DateTime.Parse(txtDate.Text),
+                    txtPhone.Text,
+                    txtMessage.Text,
+                    employeeId.SelectedValue,
+                    callType.SelectedValue,
+                    chkFollowUp.Checked);
 
-            PhoneLogController.storePhoneLog(
-                txtName.Text,
-                DateTime.Parse(txtDate.Text),
-                txtPhone.Text,
-                txtMessage.Text,
-                employeeId.SelectedValue,
-                callType.SelectedValue,
-                chkFollowUp.Checked);
+                clearAll();
+            }
         }
 
         protected Boolean saveValidation()
@@ -104,7 +111,7 @@ namespace PhoneLog
             txtPhone.Text = "";
             txtMessage.Text = "";
             employeeId.SelectedIndex = 0;
-            callType.SelectedValue = 0;
+            callType.SelectedIndex = 0;
             chkFollowUp.Checked = false;
         }
     }
