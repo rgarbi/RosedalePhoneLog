@@ -5,7 +5,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
 </asp:Content>--%>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+    Phone Message Recorded:<br/>
     <asp:Table ID="confirmTable" runat="server"></asp:Table>
-    <asp:Panel ID="confirmPanel" runat="server"></asp:Panel>
-
 </asp:Content>

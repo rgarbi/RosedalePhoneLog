@@ -20,14 +20,5 @@ namespace PhoneLog {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Table confirmTable;
-        
-        /// <summary>
-        /// confirmPanel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel confirmPanel;
     }
 }
