@@ -201,6 +201,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="employeeUpdate.aspx" />
     <Content Include="ResultsPage.aspx" />
     <Content Include="EmployeeUpdate\EmployeeDelete.aspx" />
     <Content Include="Images\accent.png" />
@@ -315,6 +316,13 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employeeUpdate.aspx.cs">
+      <DependentUpon>employeeUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employeeUpdate.aspx.designer.cs">
+      <DependentUpon>employeeUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="ResultsPage.aspx.cs">
       <DependentUpon>ResultsPage.aspx</DependentUpon>
