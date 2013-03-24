@@ -21,33 +21,10 @@ body {
     padding: 0;
 }
 
-/*a {
-    color: #333;
-    outline: none;
-    padding-left: 3px;
-    padding-right: 3px;
-    text-decoration: underline;
-}*/
-
-    /*a:link, a:visited,
-    a:active, a:hover {
-        color: #498597;
-    }*/
-
-    /*a:hover {
-        background-color: #E6E9D3;
-    }*/
-
 header, footer, hgroup,
 nav, section {
     display: block;
 }
-
-/*mark {
-    background-color: #E6E9D3;
-    padding-left: 5px;
-    padding-right: 5px;
-}*/
 
 .float-left {
     float: left;
@@ -64,13 +41,6 @@ nav, section {
     height: 0;
     visibility: hidden;
 }
-
-/*h1, h2, h3,
-h4, h5, h6 {
-    color: #000;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}*/
 
 h1 {
     font-size: 2em;
