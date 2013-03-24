@@ -13,6 +13,24 @@ namespace PhoneLog {
     public partial class WebForm2 {
         
         /// <summary>
+        /// tokenField control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField tokenField;
+        
+        /// <summary>
+        /// tblAllCalls control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table tblAllCalls;
+        
+        /// <summary>
         /// callType control.
         /// </summary>
         /// <remarks>
@@ -20,5 +38,23 @@ namespace PhoneLog {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox callType;
+        
+        /// <summary>
+        /// btnAddType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddType;
+        
+        /// <summary>
+        /// lblErrorMsgs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorMsgs;
     }
 }
