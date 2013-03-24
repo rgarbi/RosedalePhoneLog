@@ -38,9 +38,7 @@
         <div class="content-wrapper">
             <div class="float-left">
                 <p class="site-title">
-                    <img src="Images/RDA_logo_330.png" alt="Rosedale Development Association"/>
-                </p>
-            </div>
+                    <img src="Images/RDA_logo_330.png" alt="Rosedale Development Association"/></p>
             <div class="float-right">
                 <section id="login">
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
@@ -67,6 +65,9 @@
                         <li><a runat="server" href="~/callType.aspx">Call Type Update</a></li>
                     </ul>
                 </nav>
+            </div>
+                <p class="site-title">
+                    &nbsp;</p>
             </div>
         </div>
     </header>
