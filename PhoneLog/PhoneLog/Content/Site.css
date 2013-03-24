@@ -21,33 +21,33 @@ body {
     padding: 0;
 }
 
-a {
+/*a {
     color: #333;
     outline: none;
     padding-left: 3px;
     padding-right: 3px;
     text-decoration: underline;
-}
+}*/
 
-    a:link, a:visited,
+    /*a:link, a:visited,
     a:active, a:hover {
         color: #498597;
-    }
+    }*/
 
-    a:hover {
+    /*a:hover {
         background-color: #E6E9D3;
-    }
+    }*/
 
 header, footer, hgroup,
 nav, section {
     display: block;
 }
 
-mark {
+/*mark {
     background-color: #E6E9D3;
     padding-left: 5px;
     padding-right: 5px;
-}
+}*/
 
 .float-left {
     float: left;
@@ -65,12 +65,12 @@ mark {
     visibility: hidden;
 }
 
-h1, h2, h3,
+/*h1, h2, h3,
 h4, h5, h6 {
     color: #000;
     margin-bottom: 0;
     padding-bottom: 0;
-}
+}*/
 
 h1 {
     font-size: 2em;
@@ -111,14 +111,12 @@ h5, h6 {
 }
 
     .main-content {
-        /**background: url("../Images/accent.png") no-repeat;**/
         background-color: #E6E9D3;
         padding-left: 10px;
         padding-top: 30px;
     }
 
     .featured + .main-content {
-        /**background: url("../Images/heroAccent.png") no-repeat;**/
         background-color: #E6E9D3;
     }
 
@@ -166,6 +164,8 @@ footer {
         margin-right: 3px;
         padding: 2px 3px;
         text-decoration: none;
+        color: #000000;
+
     }
 
     #login a.username {
@@ -187,18 +187,13 @@ footer {
 /* menu
 ----------------------------------------------------------*/
 ul#menu {
-    /*font-size: 1.3em;
-    font-weight: 600;
-    margin: 0 0 5px;
-    padding: 0;
-    text-align: right;*/
     padding: 6px 10px;
 	padding: 0.428571429rem 0.714285714rem;
 	font-size: 14px;
 	font-size: 1.25em;
 	line-height: 1.428571429;
     font-weight:bold;
-	color: #7c7c7c;
+	color: #000000;
 	background-color: #565E3C;
 	background-repeat: repeat-x;
 	background-image: -moz-linear-gradient(top, #f4f4f4, #e6e6e6);
@@ -220,7 +215,7 @@ ul#menu {
 
         ul#menu li a {
             background: none;
-            color: #FFF8F0;
+            color: #000000;
             text-decoration: none;
         }
 
