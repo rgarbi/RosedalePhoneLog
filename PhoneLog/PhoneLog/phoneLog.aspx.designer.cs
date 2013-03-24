@@ -31,6 +31,15 @@ namespace PhoneLog {
         protected global::System.Web.UI.WebControls.TextBox txtDate;
         
         /// <summary>
+        /// lblDateError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDateError;
+        
+        /// <summary>
         /// txtName control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace PhoneLog {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtName;
+        
+        /// <summary>
+        /// lblNameError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNameError;
         
         /// <summary>
         /// txtPhone control.
@@ -67,6 +85,15 @@ namespace PhoneLog {
         protected global::System.Web.UI.WebControls.DropDownList employeeId;
         
         /// <summary>
+        /// lblEmployeeError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEmployeeError;
+        
+        /// <summary>
         /// callType control.
         /// </summary>
         /// <remarks>
@@ -74,6 +101,15 @@ namespace PhoneLog {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList callType;
+        
+        /// <summary>
+        /// lblCallTypeError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCallTypeError;
         
         /// <summary>
         /// chkFollowUp control.

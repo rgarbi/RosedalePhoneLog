@@ -58,15 +58,54 @@ namespace PhoneLog
             {
                 Trace.Write(ex.Message);
                 valid = false;
+                lblDateError.Text = "Please enter a valid date.";
             }
             
             //Must have entered Name, CallType, EmployeeEmail, Date
             if(txtName.Text.Equals(String.Empty))
             {
                 valid = false;
+                lblNameError.Text = "Please enter the name of the caller.";
+            }
+
+            if (callType.SelectedValue.Equals(String.Empty))
+            {
+                valid = false;
+                lblCallTypeError.Text = "Please select the type of the call.";
+            }
+
+            if (employeeId.SelectedValue.Equals(String.Empty))
+            {
+                valid = false;
+                lblEmployeeError.Text = "Please select the name of the person this call is for.";
             }
 
             return valid;
+        }
+
+        protected void clearAll()
+        {
+            clearAllFields();
+            clearErrorMessages();
+        }
+
+        protected void clearErrorMessages()
+        {
+            lblDateError.Text = "";
+            lblCallTypeError.Text = "";
+            lblNameError.Text = "";
+            lblEmployeeError.Text = "";
+        }
+
+        protected void clearAllFields()
+        {
+            txtName.Text = "";
+            txtDate.Text = "";
+            txtPhone.Text = "";
+            txtMessage.Text = "";
+            employeeId.SelectedIndex = 0;
+            callType.SelectedValue = 0;
+            chkFollowUp.Checked = false;
         }
     }
 }

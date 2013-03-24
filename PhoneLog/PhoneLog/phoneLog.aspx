@@ -9,13 +9,13 @@
         <asp:TableRow>
             <asp:TableCell>Date: </asp:TableCell>
             <asp:TableCell>
-                <asp:TextBox ID="txtDate" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtDate" runat="server"></asp:TextBox> <asp:Label ID="lblDateError" runat="server" Text=""></asp:Label>
             </asp:TableCell>
         </asp:TableRow>
         <asp:TableRow>
             <asp:TableCell>Name of Caller: </asp:TableCell>
             <asp:TableCell>
-                <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtName" runat="server"></asp:TextBox> <asp:Label ID="lblNameError" runat="server" Text=""></asp:Label>
             </asp:TableCell>
         </asp:TableRow>
         <asp:TableRow>
@@ -33,13 +33,13 @@
         <asp:TableRow>
             <asp:TableCell>Message Recipient: </asp:TableCell>
             <asp:TableCell>
-               <asp:DropDownList ID="employeeId" runat="server"></asp:DropDownList>
+               <asp:DropDownList ID="employeeId" runat="server"></asp:DropDownList> <asp:Label ID="lblEmployeeError" runat="server" Text=""></asp:Label>
             </asp:TableCell>
         </asp:TableRow>
         <asp:TableRow>
             <asp:TableCell>Call Type: </asp:TableCell>
             <asp:TableCell>
-                <asp:DropDownList ID="callType" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="callType" runat="server"></asp:DropDownList> <asp:Label ID="lblCallTypeError" runat="server" Text=""></asp:Label>
             </asp:TableCell>
         </asp:TableRow>
         <asp:TableRow>
