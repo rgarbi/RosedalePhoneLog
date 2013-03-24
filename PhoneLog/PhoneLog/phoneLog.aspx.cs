@@ -11,12 +11,14 @@ namespace PhoneLog
 {
     public partial class phoneLog : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected override void OnInit(EventArgs e)
         {
+            base.OnInit(e);
+
             //Load the Call Types and the Employee Email addresses
             this.callType.Items.Clear();
             this.callType.Items.Add(new ListItem(String.Empty, String.Empty));
-            foreach(CallType call in CallTypeController.getAllCallTypes())
+            foreach (CallType call in CallTypeController.getAllCallTypes())
             {
                 this.callType.Items.Add(new ListItem(call.CallType1, call.CallType1));
             }
@@ -30,6 +32,11 @@ namespace PhoneLog
 
             //Default Date
             this.txtDate.Text = DateTime.Now.Date.ToShortDateString();
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            
 
         }
 
@@ -37,6 +44,7 @@ namespace PhoneLog
         {
             //Validation
             clearErrorMessages();
+
             if (saveValidation())
             {
                 PhoneLogController.storePhoneLog(
@@ -75,7 +83,7 @@ namespace PhoneLog
                 lblNameError.Text = "Please enter the name of the caller.";
             }
 
-            if (callType.SelectedValue.Equals(String.Empty))
+            if (callType.Text.Equals(String.Empty))
             {
                 valid = false;
                 lblCallTypeError.Text = "Please select the type of the call.";

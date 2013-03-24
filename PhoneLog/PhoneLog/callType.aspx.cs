@@ -12,12 +12,17 @@ namespace PhoneLog
     public partial class WebForm2 : System.Web.UI.Page
     {
 
-        
+        protected override void OnInit(EventArgs e)
+        {
+            base.OnInit(e);
+
+            if (!IsPostBack)
+                CreateToken();
+        }
 
         protected void Page_Load()
         {
-            if (!IsPostBack)
-                CreateToken();
+            
         }
 
         // Call this method to establish a token in session and on the page.

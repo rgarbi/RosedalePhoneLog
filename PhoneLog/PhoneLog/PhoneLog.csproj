@@ -219,7 +219,7 @@
     <Content Include="Images\RDA_logo_330.png" />
     <Content Include="packages.config" />
     <Content Include="phoneLog.aspx" />
-    <Content Include="typeUpdate.aspx" />
+    <Content Include="callType.aspx" />
     <Content Include="Report.aspx" />
     <None Include="Properties\PublishProfiles\RosedaleHost.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
@@ -377,12 +377,12 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="typeUpdate.aspx.cs">
-      <DependentUpon>typeUpdate.aspx</DependentUpon>
+    <Compile Include="callType.aspx.cs">
+      <DependentUpon>callType.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="typeUpdate.aspx.designer.cs">
-      <DependentUpon>typeUpdate.aspx</DependentUpon>
+    <Compile Include="callType.aspx.designer.cs">
+      <DependentUpon>callType.aspx</DependentUpon>
     </Compile>
     <Compile Include="Report.aspx.cs">
       <DependentUpon>Report.aspx</DependentUpon>
