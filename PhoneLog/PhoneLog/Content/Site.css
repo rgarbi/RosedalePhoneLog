@@ -1,11 +1,11 @@
 ﻿html {
-    background-color: #f1f1f1;
+    background-color: #E6E9D3;
     margin: 0;
     padding: 0;
 }
 
 body {
-    background: #DCE0C2; /* old browsers */
+    background: #E6E9D3; /* old browsers */
         background: -moz-linear-gradient(top, #DCE0C2 0%, #ffffff 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#DCE0C2), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(top, #DCE0C2 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
@@ -35,7 +35,7 @@ a {
     }
 
     a:hover {
-        background-color: #c7d1d6;
+        background-color: #E6E9D3;
     }
 
 header, footer, hgroup,
@@ -112,14 +112,14 @@ h5, h6 {
 
     .main-content {
         /**background: url("../Images/accent.png") no-repeat;**/
-        background-color: #c7d1d6;
+        background-color: #E6E9D3;
         padding-left: 10px;
         padding-top: 30px;
     }
 
     .featured + .main-content {
         /**background: url("../Images/heroAccent.png") no-repeat;**/
-        background-color: #c7d1d6;
+        background-color: #E6E9D3;
     }
 
 header .content-wrapper {
@@ -128,7 +128,7 @@ header .content-wrapper {
     
 footer {
     clear: both;
-    background-color: #e2e2e2;
+    background-color: #E6E9D3;
     font-size: .8em;
     height: 100px;
 }
@@ -161,7 +161,7 @@ footer {
 }
 
     #login a {
-        background-color: #d3dce0;
+        background-color: #E6E9D3;
         margin-left: 10px;
         margin-right: 3px;
         padding: 2px 3px;
@@ -194,10 +194,10 @@ ul#menu {
     text-align: right;*/
     padding: 6px 10px;
 	padding: 0.428571429rem 0.714285714rem;
-	font-size: 11px;
-	font-size: 0.785714286rem;
+	font-size: 14px;
+	font-size: 1.25em;
 	line-height: 1.428571429;
-	font-weight: normal;
+    font-weight:bold;
 	color: #7c7c7c;
 	background-color: #e6e6e6;
 	background-repeat: repeat-x;
