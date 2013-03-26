@@ -20,7 +20,7 @@ namespace PhoneLog.Controllers
             var smtp = new SmtpClient
             {
                 Host = "smtp.gmail.com",
-                Port = 25,
+                Port = 587,
                 EnableSsl = true,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
                 UseDefaultCredentials = false,

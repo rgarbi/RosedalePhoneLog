@@ -5,7 +5,7 @@
 </asp:Content>--%>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <asp:HiddenField ID="tokenField" runat="server" />
-    <asp:Table ID="tblAllEmployees" runat="server" GridLines="Both"></asp:Table>
+    
     
     Name: <asp:TextBox ID="txtEmplName" runat="server"></asp:TextBox><br/>
     Email: <asp:TextBox ID="txtEmplEmailAddress" runat="server"></asp:TextBox><br/>

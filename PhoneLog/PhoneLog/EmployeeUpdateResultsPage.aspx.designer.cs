@@ -10,24 +10,24 @@
 namespace PhoneLog {
     
     
-    public partial class WebForm3 {
+    public partial class EmployeeUpdateResultsPage {
         
         /// <summary>
-        /// beforeDate control.
+        /// addNewEmployee control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox beforeDate;
+        protected global::System.Web.UI.WebControls.HyperLink addNewEmployee;
         
         /// <summary>
-        /// TextBox1 control.
+        /// tblAllEmployees control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.Table tblAllEmployees;
     }
 }

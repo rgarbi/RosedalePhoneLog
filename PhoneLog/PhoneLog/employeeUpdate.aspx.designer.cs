@@ -22,15 +22,6 @@ namespace PhoneLog {
         protected global::System.Web.UI.WebControls.HiddenField tokenField;
         
         /// <summary>
-        /// tblAllEmployees control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Table tblAllEmployees;
-        
-        /// <summary>
         /// txtEmplName control.
         /// </summary>
         /// <remarks>

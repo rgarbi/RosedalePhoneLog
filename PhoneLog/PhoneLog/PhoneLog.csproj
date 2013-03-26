@@ -28,6 +28,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PrecompileBeforePublish>true</PrecompileBeforePublish>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -145,6 +146,7 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="CallTypeResultsPage.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\jquery-ui.css" />
     <Content Include="Content\themes\base\jquery.ui.accordion.css" />
@@ -188,6 +190,8 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="employeeUpdate.aspx" />
+    <Content Include="EmployeeUpdateResultsPage.aspx" />
+    <Content Include="ReportResultsPage.aspx" />
     <Content Include="ResultsPage.aspx" />
     <Content Include="EmployeeUpdate\EmployeeDelete.aspx" />
     <Content Include="Images\RDA_logo_330.png" />
@@ -250,6 +254,13 @@
     <Compile Include="App_Code\models\PhoneLogContext.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="CallTypeResultsPage.aspx.cs">
+      <DependentUpon>CallTypeResultsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CallTypeResultsPage.aspx.designer.cs">
+      <DependentUpon>CallTypeResultsPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\CallTypeController.cs" />
     <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
@@ -296,6 +307,13 @@
     <Compile Include="employeeUpdate.aspx.designer.cs">
       <DependentUpon>employeeUpdate.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeUpdateResultsPage.aspx.cs">
+      <DependentUpon>EmployeeUpdateResultsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeUpdateResultsPage.aspx.designer.cs">
+      <DependentUpon>EmployeeUpdateResultsPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeUpdate\Site.Master.cs">
       <DependentUpon>Master.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -307,6 +325,13 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReportResultsPage.aspx.cs">
+      <DependentUpon>ReportResultsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportResultsPage.aspx.designer.cs">
+      <DependentUpon>ReportResultsPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="ResultsPage.aspx.cs">
       <DependentUpon>ResultsPage.aspx</DependentUpon>
