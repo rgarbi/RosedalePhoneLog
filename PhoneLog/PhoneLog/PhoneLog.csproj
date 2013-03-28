@@ -191,6 +191,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="employeeUpdate.aspx" />
     <Content Include="EmployeeUpdateResultsPage.aspx" />
+    <Content Include="PhoneLogUpdate.aspx" />
     <Content Include="ReportResultsPage.aspx" />
     <Content Include="ResultsPage.aspx" />
     <Content Include="EmployeeUpdate\EmployeeDelete.aspx" />
@@ -320,6 +321,13 @@
     </Compile>
     <Compile Include="EmployeeUpdate\Site.Master.designer.cs">
       <DependentUpon>Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneLogUpdate.aspx.cs">
+      <DependentUpon>PhoneLogUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PhoneLogUpdate.aspx.designer.cs">
+      <DependentUpon>PhoneLogUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>

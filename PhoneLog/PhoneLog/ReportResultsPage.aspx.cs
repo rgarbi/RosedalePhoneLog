@@ -52,7 +52,7 @@ namespace PhoneLog
                 row.Cells.Add(cell);
 
                 cell = new TableCell();
-                cell.Text = "Update";
+                cell.Text = "<a href='PhoneLogUpdate.aspx?PhoneLogId=" + log.Id.ToString() + "'>Update<a>";
                 row.Cells.Add(cell);
                 this.allPhoneLogsTable.Rows.Add(row);
             }

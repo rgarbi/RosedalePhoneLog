@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using PhoneLog.Models;
+using System.Data;
 
 namespace PhoneLog.Controllers
 {
@@ -36,6 +37,26 @@ namespace PhoneLog.Controllers
 
                 EmailController.sendAnEmail(savedLog);
                 return savedLog.Id;
+            }
+        }
+
+        public static void updatePhoneLog(int id, string name, DateTime date, string phoneNumber, string message, string employeeEmail, string callType, Boolean followedUp)
+        {
+            using (var db = new PhoneLog.Models.PhoneLogContext())
+            {
+
+                Models.PhoneLog log = (from x in db.PhoneLogs 
+                                        where x.Id == id
+                                        select x).First();
+                log.Id = id;
+                log.CallerName = name;
+                log.CallDate = date;
+                log.CallType = callType;
+                log.Message = message;
+                log.PhoneNumber = phoneNumber;
+                log.FollowedUp = followedUp;
+                log.EmployeeEmail = employeeEmail;
+                db.SaveChanges();
             }
         }
 
