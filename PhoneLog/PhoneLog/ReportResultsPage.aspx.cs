@@ -10,11 +10,31 @@ namespace PhoneLog
 {
     public partial class ReportResultsPage : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected override void OnInit(EventArgs e)
         {
-            List<Models.PhoneLog> allPhoneLogs = PhoneLogController.getAllPhoneLogs();
+            base.OnInit(e);
+            List<Models.PhoneLog> allPhoneLogs;
+            string type = HttpUtility.ParseQueryString(Request.Url.Query).Get("reportType");
+            ReportTypes.types typeVal = (ReportTypes.types)Enum.Parse(typeof(ReportTypes.types), type);
+            switch (typeVal)
+            {
+                case ReportTypes.types.allLogs:
+                    allPhoneLogs = PhoneLogController.getAllPhoneLogs();
+                    break;
+                case ReportTypes.types.thirtyDays:
+                    allPhoneLogs = PhoneLogController.getAllPhoneLogsInRange(DateTime.Now.Subtract(new TimeSpan(30,0,0,0)), DateTime.Now);
+                    break;
+                case ReportTypes.types.notFollowedUp:
+                    allPhoneLogs = PhoneLogController.getAllPhoneLogsNotFollowedUp();
+                    break;
+                default:
+                    allPhoneLogs = PhoneLogController.getAllPhoneLogs();
+                    break;
+            }
+
             
-            foreach(Models.PhoneLog log in allPhoneLogs)
+
+            foreach (Models.PhoneLog log in allPhoneLogs)
             {
 
                 TableRow row = new TableRow();
@@ -57,8 +77,10 @@ namespace PhoneLog
                 this.allPhoneLogsTable.Rows.Add(row);
             }
 
+        }
+        protected void Page_Load(object sender, EventArgs e)
+        {
             
-
         }
     }
 }

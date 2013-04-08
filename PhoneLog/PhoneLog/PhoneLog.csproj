@@ -301,6 +301,7 @@
     <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\ReportTypes.cs" />
     <Compile Include="employeeUpdate.aspx.cs">
       <DependentUpon>employeeUpdate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

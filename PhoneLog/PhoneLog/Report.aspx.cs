@@ -11,6 +11,9 @@ namespace PhoneLog
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.AllPhoneLogs.NavigateUrl = "~/ReportResultsPage.aspx?reportType=" + PhoneLog.Controllers.ReportTypes.types.allLogs.ToString();
+            this.ThityDayLogs.NavigateUrl = "~/ReportResultsPage.aspx?reportType=" + PhoneLog.Controllers.ReportTypes.types.thirtyDays.ToString();
+            this.NotFollowedUp.NavigateUrl = "~/ReportResultsPage.aspx?reportType=" + PhoneLog.Controllers.ReportTypes.types.notFollowedUp.ToString();
 
         }
     }

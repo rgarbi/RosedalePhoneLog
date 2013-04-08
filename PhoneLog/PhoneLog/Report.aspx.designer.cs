@@ -13,21 +13,30 @@ namespace PhoneLog {
     public partial class WebForm3 {
         
         /// <summary>
-        /// beforeDate control.
+        /// AllPhoneLogs control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox beforeDate;
+        protected global::System.Web.UI.WebControls.HyperLink AllPhoneLogs;
         
         /// <summary>
-        /// TextBox1 control.
+        /// ThityDayLogs control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.HyperLink ThityDayLogs;
+        
+        /// <summary>
+        /// NotFollowedUp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink NotFollowedUp;
     }
 }

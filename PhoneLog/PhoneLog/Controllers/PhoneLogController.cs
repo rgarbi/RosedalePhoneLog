@@ -130,6 +130,37 @@ namespace PhoneLog.Controllers
             return allLogs;
         }
 
+        public static List<PhoneLog.Models.PhoneLog> getAllPhoneLogsNotFollowedUp()
+        {
+            List<PhoneLog.Models.PhoneLog> allLogs = new List<Models.PhoneLog>();
+
+            using (var db = new PhoneLog.Models.PhoneLogContext())
+            {
+                var query = from l in db.PhoneLogs
+                            where (l.FollowedUp.Value.Equals(false))
+                            orderby l.CallDate
+                            select l;
+
+                Console.WriteLine("All logs in the database:");
+                foreach (var item in query)
+                {
+                    allLogs.Add(new Models.PhoneLog
+                    {
+                        Id = item.Id,
+                        CallerName = item.CallerName,
+                        CallDate = item.CallDate,
+                        PhoneNumber = item.PhoneNumber,
+                        EmployeeEmail = item.EmployeeEmail,
+                        CallType = item.CallType,
+                        FollowedUp = item.FollowedUp,
+                        Message = item.Message
+                    });
+                }
+            }
+
+            return allLogs;
+        }
+
 
         public static Models.PhoneLog getPhoneLogById(int id)
         {

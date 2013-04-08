@@ -60,7 +60,7 @@
                 <nav>
                     <ul id="menu">
                         <li><a runat="server" href="Default.aspx">Phone Log</a></li>
-                        <li><a runat="server" href="~/Report.aspx">Create a Report</a></li>
+                        <li><a runat="server" href="~/Report.aspx">Reports</a></li>
                         <li><a runat="server" href="~/employeeUpdate.aspx">Employee Update</a></li>
                         <li><a runat="server" href="~/callType.aspx">Call Type Update</a></li>
                     </ul>
