@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
+using System.Text;
 using System.Web;
 
 namespace PhoneLog.Controllers
@@ -29,12 +30,31 @@ namespace PhoneLog.Controllers
             using (var message = new MailMessage(fromAddress, toAddress)
             {
                 Subject = subject,
-                Body = body
+                IsBodyHtml = true,
+                Body = buildBody(phoneLog)
             })
             {
                 smtp.Send(message);
             }
         }
+
+        public static string buildBody(Models.PhoneLog phoneLog)
+        {
+
+            string host = HttpContext.Current.Request.Url.Host;
+            StringBuilder messageBuilder = new StringBuilder();
+            messageBuilder.Append("<div>");
+            messageBuilder.Append("<p>You have a message from: " + phoneLog.CallerName + "</p>");
+            messageBuilder.Append("<p>They Called On: " + phoneLog.CallDate.Value.ToShortDateString() + "</p>");
+            messageBuilder.Append("<p>Call Type: " + phoneLog.CallType + "</p>");
+            messageBuilder.Append("<p>Message: " + phoneLog.Message + "</p>");
+            messageBuilder.Append("<p>Their Phone Number: " + phoneLog.PhoneNumber + "</p>");
+            messageBuilder.Append("<p><a href='http://"+HttpContext.Current.Request.Url.Host+"/phonelog/PhoneLogUpdate.aspx?PhoneLogId=" + phoneLog.Id + "'>Click Here to mark the call as followed up.</a></p>");
+            messageBuilder.Append("</div>");
+
+            return messageBuilder.ToString();
+        }
+
 
     }
 }
