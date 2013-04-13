@@ -141,11 +141,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Account\Login.aspx" />
-    <Content Include="Account\Manage.aspx" />
-    <Content Include="Account\OpenAuthProviders.ascx" />
-    <Content Include="Account\Register.aspx" />
-    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Manage.aspx" />
     <Content Include="CallTypeResultsPage.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\jquery-ui.css" />
@@ -191,6 +187,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="employeeUpdate.aspx" />
     <Content Include="EmployeeUpdateResultsPage.aspx" />
+    <Content Include="logon.aspx" />
     <Content Include="PhoneLogUpdate.aspx" />
     <Content Include="ReportResultsPage.aspx" />
     <Content Include="ResultsPage.aspx" />
@@ -200,7 +197,6 @@
     <Content Include="Default.aspx" />
     <Content Include="callType.aspx" />
     <Content Include="Report.aspx" />
-    <Content Include="Account\Master.Master" />
     <None Include="EmployeeUpdate\Master.Master" />
     <None Include="Properties\PublishProfiles\RosedaleHost.pubxml" />
     <Content Include="Properties\Settings.settings">
@@ -237,19 +233,13 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="UserAdmin.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account\Master.Master.cs">
-      <DependentUpon>Master.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Master.Master.designer.cs">
-      <DependentUpon>Master.Master</DependentUpon>
-    </Compile>
     <Compile Include="App_Code\models\EmployeeMdl.cs" />
     <Compile Include="App_Code\models\CallTypeMdl.cs" />
     <Compile Include="App_Code\models\PhoneLogContext.cs" />
@@ -266,40 +256,12 @@
     <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\PhoneLogController.cs" />
-    <Compile Include="Account\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\Manage.aspx.cs">
+    <Compile Include="Manage.aspx.cs">
       <DependentUpon>Manage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\Manage.aspx.designer.cs">
+    <Compile Include="Manage.aspx.designer.cs">
       <DependentUpon>Manage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\OpenAuthProviders.ascx.cs">
-      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
-      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
-      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
-      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\ReportTypes.cs" />
     <Compile Include="employeeUpdate.aspx.cs">
@@ -322,6 +284,13 @@
     </Compile>
     <Compile Include="EmployeeUpdate\Site.Master.designer.cs">
       <DependentUpon>Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="logon.aspx.cs">
+      <DependentUpon>logon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logon.aspx.designer.cs">
+      <DependentUpon>logon.aspx</DependentUpon>
     </Compile>
     <Compile Include="PhoneLogUpdate.aspx.cs">
       <DependentUpon>PhoneLogUpdate.aspx</DependentUpon>
@@ -410,6 +379,13 @@
     <Compile Include="Report.aspx.designer.cs">
       <DependentUpon>Report.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserAdmin.aspx.cs">
+      <DependentUpon>UserAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserAdmin.aspx.designer.cs">
+      <DependentUpon>UserAdmin.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\broker\" />
@@ -417,7 +393,6 @@
     <Folder Include="Content\themes\base\images\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Account\Web.config" />
     <Content Include="Site.Master" />
   </ItemGroup>
   <ItemGroup>
