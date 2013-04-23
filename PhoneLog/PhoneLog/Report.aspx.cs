@@ -16,5 +16,27 @@ namespace PhoneLog
             this.NotFollowedUp.NavigateUrl = "~/ReportResultsPage.aspx?reportType=" + PhoneLog.Controllers.ReportTypes.types.notFollowedUp.ToString();
 
         }
+
+        protected void btnRunReport_Click(object sender, EventArgs e)
+        {
+            DateTime beginDate = calBeginDate.SelectedDate;
+            DateTime endDate = calEndDate.SelectedDate;
+
+            if (endDate == null || beginDate == null)
+            {
+                lblMsg.Text = "Please select both an end date and a begin date.";
+                return;
+            }
+            else
+            {
+                lblMsg.Text = "";
+
+                long beginDateTicks = beginDate.Ticks;
+                long endDateTicks = endDate.Ticks;
+
+                Response.Redirect("~/ReportResultsPage.aspx?beginDate=" + beginDateTicks + "&endDate=" + endDateTicks, true);
+
+            }
+        }
     }
 }

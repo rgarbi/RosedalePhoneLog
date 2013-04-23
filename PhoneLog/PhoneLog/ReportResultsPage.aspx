@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-
+    <asp:Button ID="btnExcel" runat="server" Text="Generate Excel" OnClick="btnExcel_Click" />
     <asp:Table ID="allPhoneLogsTable" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" GridLines="Both">
         <asp:TableRow runat="server" BorderStyle="Solid" BorderWidth="1px" TableSection="TableHeader">
             <asp:TableCell runat="server">ID</asp:TableCell>

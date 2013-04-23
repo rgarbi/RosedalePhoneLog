@@ -11,7 +11,7 @@ namespace PhoneLogTest
         [TestMethod]
         public void TestMethod1()
         {
-            string hashMethod = "SHA1";
+            //string hashMethod = "SHA1";
 
 
         }

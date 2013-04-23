@@ -16,7 +16,7 @@ namespace PhoneLog.Controllers
             var toAddress = new MailAddress(phoneLog.EmployeeEmail, "To Name");
             const string fromPassword = "Q3tn5EUfmrA3sEzc0h89";
             string subject = "Phone Message from: " + phoneLog.CallerName;
-            string body = "Body";
+            
 
             var smtp = new SmtpClient
             {
